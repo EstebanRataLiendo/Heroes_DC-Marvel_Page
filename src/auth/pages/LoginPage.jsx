@@ -8,17 +8,18 @@ export const LoginPage = () => {
 
   const onLogin = () => {
 
+  const lastPath = localStorage.getItem('lastPath') || '/';
 
     login('Esteban')
 
-    navigate('/', {
+    navigate(lastPath, {
       replace:true
     })
   }
   return (
     <>
     <div className="p-5">
-      <h1>LoginPage</h1>
+      <h1>Login</h1>
       <hr />
       <button
         className="btn btn-primary"
